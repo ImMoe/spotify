@@ -1,0 +1,16 @@
+@media screen and (max-width: 995px) {
+  .left-section {
+    display: none;
+  }
+  .main-section {
+    margin: 0 1rem;
+    overflow-y: scroll;
+    font-size: 0.9rem;
+  }
+  .player {
+    display: block;
+  }
+  .player .cover {
+    padding: 10px 0;
+  }
+}

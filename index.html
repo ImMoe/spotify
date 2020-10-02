@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"
+    ></script>
+    <title>Spotify v1</title>
+  </head>
+  <body>
+    <div class="player">
+      <div class="cover" style="color: white">
+        <p></p>
+        <p></p>
+      </div>
+      <audio id="player" loop>
+        <source src="" type="audio/mp3" />
+      </audio>
+    </div>
+
+    <div class="container">
+      <aside class="left-section">
+        <div class="nav-1">
+          <ul>
+            <li>
+              <a href=""><ion-icon name="home-outline"></ion-icon> Home</a>
+            </li>
+            <li>
+              <a href=""
+                ><ion-icon name="browsers-outline"></ion-icon> Browse</a
+              >
+            </li>
+            <li>
+              <a href=""><ion-icon name="radio-outline"></ion-icon> Radio</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-2">
+          <p>Your library</p>
+          <ul>
+            <li><a href="">Made for you</a></li>
+            <li><a href="">Recently played</a></li>
+            <li><a href="">Liked songs</a></li>
+            <li><a href="">Albums</a></li>
+            <li><a href="">Artists</a></li>
+            <li><a href="">Podcasts</a></li>
+          </ul>
+        </div>
+        <div class="nav-3">
+          <p>Top lists</p>
+          <ul>
+            <li><a href="">Sweden Top 50</a></li>
+            <li><a href="">Usa Top 50</a></li>
+            <li><a href="">France Top 50</a></li>
+            <li><a href="">Germany Top 50</a></li>
+          </ul>
+        </div>
+
+        <div class="song-cover">
+          <img src="" alt="" />
+        </div>
+      </aside>
+      <main class="main-section spacing">
+        <h1>Songs</h1>
+        <button>Party</button>
+
+        <table id="songs">
+          <tr>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Play</th>
+          </tr>
+        </table>
+      </main>
+    </div>
+
+    <script src="https://cdn.plyr.io/3.6.2/plyr.js"></script>
+    <script src="scripts/songs.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/play.js"></script>
+    <script defer>
+      const player = new Plyr('#player')
+    </script>
+  </body>
+</html>
