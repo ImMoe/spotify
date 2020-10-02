@@ -7,10 +7,14 @@
 }
 
 :root {
-  --plyr-color-main: #1db954;
-  --primary: #1db954;
+  --plyr-color-main: #9d65c9;
+  --primary: #9d65c9;
   --plyr-audio-controls-background: #212121;
   --text-color: #b3b3b3;
+}
+
+.primary {
+  color: var(--primary);
 }
 
 body {
@@ -28,6 +32,16 @@ body {
   margin: 1rem 0;
 }
 
+/* .fill-screen-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(31, 31, 31, 0.966);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+} */
+
 .player {
   display: flex;
   align-items: center;
@@ -36,6 +50,7 @@ body {
   left: 0;
   right: 0;
   background-color: #212121;
+  z-index: 10;
 }
 
 .player .cover {
@@ -133,6 +148,41 @@ ion-icon {
   margin: 0 2rem;
   margin-top: 2rem;
   font-size: 0.9rem;
+  padding-bottom: 3rem;
+}
+
+.banner {
+  height: 250px;
+  width: 100%;
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.banner::after {
+  content: 'Only good music. Keep it simple.';
+  position: absolute;
+  background-image: linear-gradient(
+      to top,
+      #1c1c1cf1,
+      #252525ea,
+      #2f2f2fef,
+      #3a3a3aef,
+      #444444f5
+    ),
+    url(highlight.jpg);
+  background-position: center;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #707070;
+  line-height: 100px;
 }
 
 .main-section h1 {
@@ -155,8 +205,25 @@ ion-icon {
 }
 
 .main-section button:hover {
-  background-color: #179443;
+  background-color: #1f201f;
   transition: all 300ms linear;
+}
+.searchArea {
+  display: flex;
+  align-items: center;
+}
+.searchArea ion-icon {
+  font-size: 1.3rem;
+  color: var(--text-color);
+}
+.searchArea #songInput {
+  display: block;
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+  padding: 8px 10px;
+  flex: 1;
+  outline: none;
 }
 
 #songs {
@@ -169,6 +236,7 @@ ion-icon {
   border-bottom: 1px solid #262626;
   padding: 10px;
   color: #fff;
+  cursor: pointer;
 }
 
 #songs tr {

@@ -17,6 +17,7 @@
     <title>Spotify v1</title>
   </head>
   <body>
+    <div class="fill-screen-exit"></div>
     <div class="player">
       <div class="cover" style="color: white">
         <p></p>
@@ -69,14 +70,29 @@
           <img src="" alt="" />
         </div>
       </aside>
-      <main class="main-section spacing">
-        <h1>Songs</h1>
-        <button>Party</button>
 
+      <main class="main-section spacing">
+        <div class="banner"></div>
+        <div class="party spacing">
+          <h1>Songs</h1>
+          <button>Party</button>
+        </div>
+
+        <div class="searchArea">
+          <label for="songInput">
+            <ion-icon name="search-outline"></ion-icon>
+          </label>
+          <input
+            type="text"
+            id="songInput"
+            onkeyup="filterSongs()"
+            placeholder="Search for song name.."
+          />
+        </div>
         <table id="songs">
           <tr>
-            <th>Title</th>
-            <th>Artist</th>
+            <th onclick="sortTable(0)">Title</th>
+            <th onclick="sortTable(1)">Artist</th>
             <th>Play</th>
           </tr>
         </table>
