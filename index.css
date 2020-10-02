@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
+  overflow: hidden;
 }
 
 :root {
@@ -15,6 +16,26 @@
 
 .primary {
   color: var(--primary);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(53, 53, 53);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 body {
@@ -253,4 +274,10 @@ ion-icon {
   text-align: left;
   background-color: #181818;
   color: #b3b3b3;
+}
+
+.song_img {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }

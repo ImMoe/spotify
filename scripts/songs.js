@@ -30,9 +30,15 @@ const songReference = [
     cover: 'faster than fast',
   },
   {
-    title: "Lartiste - C'est une frappe",
+    title: "C'est une frappe",
     artist: 'Lartiste',
     song: "6. C'est une frappe",
     cover: 'cest une frappe',
+  },
+  {
+    title: 'Vice',
+    artist: 'Haval',
+    song: '7. Vice',
+    cover: 'vice',
   },
 ]

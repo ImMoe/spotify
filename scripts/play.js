@@ -3,8 +3,12 @@
  */
 const playButtons = document.querySelectorAll('.playSong')
 
+// User can click the playbutton or the table row itself and this will trigger the song to start
 playButtons.forEach((single) => {
-  single.addEventListener('click', startPlaySong)
+  single.parentElement.parentElement.addEventListener('click', () => {
+    single.addEventListener('click', startPlaySong)
+    single.click()
+  })
 })
 
 function startPlaySong(e) {
