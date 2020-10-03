@@ -250,6 +250,7 @@ ion-icon {
 #songs {
   border-collapse: collapse;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 #songs td,

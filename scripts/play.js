@@ -26,6 +26,7 @@ function startPlaySong(e) {
   songImage.setAttribute('src', `songs/covers/${cover.innerText}.png`)
   // Set the source for player
   songPlayer.src = `songs/${song.innerText}.mp3`
+  songPlayer.setAttribute('preload', 'auto')
   songPlayer.load()
   songPlayer.play()
 
