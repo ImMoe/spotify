@@ -2,6 +2,8 @@
  * Retrieve play buttons after DOM has rendered the songs
  */
 const playButtons = document.querySelectorAll('.playSong')
+const banner = document.querySelector('.banner')
+const partyButton = document.querySelector('.party button')
 
 // User can click the playbutton or the table row itself and this will trigger the song to start
 playButtons.forEach((single) => {
@@ -10,6 +12,9 @@ playButtons.forEach((single) => {
     single.click()
   })
 })
+
+// Run party mode
+partyButton.addEventListener('click', partyMode)
 
 function startPlaySong(e) {
   const tableData = Array.from(e.target.parentElement.parentElement.children)
@@ -26,4 +31,10 @@ function startPlaySong(e) {
 
   // Update Page title to show song title and artist
   document.title = ` ${title.innerText} - ${artist.innerText}`
+}
+
+// Shuffle
+function partyMode(e) {
+  const randomSong = Math.floor(Math.random() * (playButtons.length - 1)) + 1
+  playButtons[randomSong].parentElement.click()
 }

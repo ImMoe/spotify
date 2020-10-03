@@ -43,4 +43,8 @@
   #songInput {
     font-size: 1rem;
   }
+  #songs td,
+  #songs th {
+    font-size: 0.9rem;
+  }
 }
