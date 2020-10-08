@@ -63,29 +63,45 @@ body {
   z-index: 10;
 } */
 
-.player {
-  display: flex;
-  align-items: center;
+.bottom_section {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: #212121;
   z-index: 10;
+  display: none;
 }
 
-.player .cover {
-  flex: 1;
+.controls {
   text-align: center;
-  padding: 1rem 0;
+  color: var(--text-color);
 }
 
-.player .cover p:nth-child(2) {
-  font-size: 0.7rem;
+.controls ion-icon:nth-child(2):hover {
+  transform: scale(1.125);
+  transition: transform 300ms linear;
 }
 
+.controls ion-icon:hover {
+  color: var(--primary);
+  transition: all 300ms linear;
+}
+
+.cover {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+div.plyr.plyr--full-ui.plyr--audio.plyr--html5.plyr--paused.plyr--stopped,
+button.plyr__controls__item.plyr__control.plyr__control--pressed {
+  display: none;
+}
 .plyr {
-  flex: 9;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .container {
@@ -162,6 +178,7 @@ ion-icon {
 
 .song-cover {
   transform: translateY(10px);
+  z-index: 100;
 }
 
 .main-section {
@@ -169,7 +186,7 @@ ion-icon {
   margin: 0 2rem;
   margin-top: 2rem;
   font-size: 0.9rem;
-  padding-bottom: 3rem;
+  padding-bottom: 10rem;
 }
 
 .banner {

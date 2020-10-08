@@ -26,8 +26,8 @@
   .player {
     display: block;
   }
-  .player .cover {
-    padding: 10px 0;
+  .plyr {
+    width: 100%;
   }
   .banner {
     height: 120px;

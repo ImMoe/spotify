@@ -1,7 +1,7 @@
 const table = document.getElementById('songs')
 const songPlayer = document.querySelector('#player')
 const songImage = document.querySelector('.song-cover img')
-const songInfo = document.querySelectorAll('.cover p')
+const songInfo = document.querySelector('.cover')
 
 createSongList()
 
@@ -11,7 +11,7 @@ function createSongList() {
       <tr>
         <td class="song_img"><img src="songs/covers/${song.cover}.png" width="40" /><p>${song.title}</p></td>
         <td>${song.artist}</td>
-        <td><ion-icon name="play-circle-outline" size="large" class="playSong"></ion-icon></td>
+        <td id="id${song.id}"><ion-icon name="play-circle-outline" size="large" class="playSong"></ion-icon></td>
         <td style="display: none">${song.song}</td>
         <td style="display: none">${song.cover}</td>
       </tr>
